@@ -1,0 +1,23 @@
+<script src="https://sdodemo-main-166ce2cf6b6-170-178382099c2.force.com/lightning/lightning.out.js"></script>
+<script>
+    window.onload = function() {
+        $Lightning.use("c:DE_FlowRunnerApp", // name of the Lightning app
+            function() { // Callback once framework and app loaded
+                $Lightning.createComponent(
+                    "c:DE_FlowRunner", // top-level component of your app
+                    {}, // attributes to set on the component when created
+                    "lightningLocator", // the DOM location to insert the component
+                    function() {
+                        console.log('Hi from callback'); // callback when component is created and active on the page
+                    }
+                );
+            }, 'https://sdodemo-main-166ce2cf6b6-170-178382099c2.force.com/professional' // Community endpoint
+        );
+    }
+
+</script>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<div id="lightningLocator">
+</div>
